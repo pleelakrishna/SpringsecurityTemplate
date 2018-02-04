@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!-- Side Menu starts here -->
 	<div class="main-container ace-save-state" id="main-container">
@@ -51,8 +51,8 @@
 						<span class="menu-text">Create Ticket</span>
 					</a>
 				</li>
-				<c:if test="${cacheUserBean.designation == 1}">
-				<security:authorize access="hasRole('ROLE_USER')">
+			
+				<sec:authorize access="hasRole('ROLE_ADMIN')">
 				<li class="viewUsers">
 					<a href="viewUsers">
 						<i class="menu-icon fa fa-users"></i>
@@ -65,8 +65,7 @@
 						<span class="menu-text">Create User</span>
 					</a>
 				</li>
-				</security:authorize>
-				</c:if>
+				</sec:authorize>
 			</ul><!-- /.nav-list -->
 
 			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

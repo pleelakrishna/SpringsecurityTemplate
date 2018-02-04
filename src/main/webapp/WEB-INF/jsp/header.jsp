@@ -137,7 +137,7 @@ span.has-error,span.hasError
 					<li class="blue "><a href="createTicketIssues">Create Ticket</a></li>
 					<li class="light-blue dropdown-modal">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							Hi ${pageContext.request.userPrincipal.name} <i class="ace-icon fa fa-caret-down"></i>
+							Hi ${pageContext.request.userPrincipal.name}  <i class="ace-icon fa fa-caret-down"></i>
 						</a>
 
 						<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
